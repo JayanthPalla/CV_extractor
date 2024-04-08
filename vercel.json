@@ -6,7 +6,7 @@
     }],
     "routes": [
         {
-            "src": "/(.*)",
+            "src": "/",
             "dest": "cv_extractor/wsgi.py"
         }
     ]
