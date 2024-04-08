@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Directory</title>
+</head>
+<body>
+    <form id="directoryForm" action="{% url 'submit' %}" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <label for="dir_path">Enter the absolute directory path of Folder : </label>
+        <input type="text" name="dir_path" id="dir_path" placeholder="Enter the absolute directory of Folder..." /> <br>
+        <button type="submit">Submit</button>
+    </form>
+
+    {% if rtd %}
+    <a href="{% url 'download' %}"><button>Download Excel</button></a>
+    {% else %}
+    <h1 id="result"></h1>
+    {% endif %}
+    
+
+    <script>
+        document.getElementById("directoryForm").onsubmit = ()=>{
+            document.getElementById('result').innerHTML = "Processing..."
+        }
+    </script>
+</body>
+</html>
