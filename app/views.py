@@ -1,6 +1,6 @@
 from django.http import HttpResponse
 from django.shortcuts import render
-from app.mechanism import start_process
+# from app.mechanism import start_process
 import os
 import pdfplumber
 import docx
