@@ -1,6 +1,6 @@
 from django.http import HttpResponse
 from django.shortcuts import render
-from .mechanism import start_process
+from app.mechanism import start_process
 import os
 
 # Create your views here.
